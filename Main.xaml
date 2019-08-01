@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="670,756" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="670,716" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
       <x:String>System.Activities</x:String>
@@ -116,21 +116,21 @@
               <av:Size x:Key="ShapeSize">216,52.6666666666667</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DTcliente]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="961.333333333333,1720" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DTcliente]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="961.333333333333,2152" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="914.666666666667,1567.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="914.666666666667,1999.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[row(1).Equals(&quot;semanal&quot;)]" sap:VirtualizedContainerService.HintSize="876.666666666667,1475.33333333333" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[row(1).Equals(&quot;semanal&quot;)]" sap:VirtualizedContainerService.HintSize="876.666666666667,1907.33333333333" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="734.666666666667,1321.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence sap:VirtualizedContainerService.HintSize="734.666666666667,1753.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="ui:WorkbookApplication" Name="WBhotel" />
                           <Variable x:TypeArguments="x:String" Name="NombreCliente" />
@@ -141,24 +141,17 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="696.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_2">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">[NombreCliente]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">[row(0).ToString]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="696.666666666667,1127.33333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" Workbook="[WBhotel]" WorkbookPath="[&quot;C:\Users\agustin\Desktop\AgusCosas\Lavadero San Jose\Clientes prueba\&quot;+row(0).ToString+&quot;.xlsx&quot;]">
+                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="696.666666666667,1661.33333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" Workbook="[WBhotel]" WorkbookPath="[&quot;C:\Users\agustin\Desktop\AgusCosas\Lavadero San Jose\Clientes prueba\&quot;+row(0).ToString+&quot;.xlsx&quot;]">
                           <ui:ExcelApplicationScope.Body>
                             <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="666.666666666667,1018.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="666.666666666667,1552.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="ui:WorkbookApplication" Name="WBsemanal" />
-                                  <Variable x:TypeArguments="x:Int32" Default="0" Name="contador" />
+                                  <Variable x:TypeArguments="x:Int32" Default="1" Name="contador" />
+                                  <Variable x:TypeArguments="x:Int32" Default="1" Name="contador2" />
                                 </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -166,7 +159,45 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="628.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Etapa de impresion&quot;]" TopMost="True" />
-                                <ui:ExcelReadRange AddHeaders="False" DataTable="[DTsemanal]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="628.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" Range="A1:H3" SheetName="saldo" />
+                                <Sequence sap:VirtualizedContainerService.HintSize="628.666666666667,494" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="sd:DataTable" Name="DTcantidadDeCeldas" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:ExcelReadRange Range="{x:Null}" AddHeaders="False" DataTable="[DTcantidadDeCeldas]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="342.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" SheetName="saldo" />
+                                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DTcantidadDeCeldas]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="342.666666666667,303.333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                    <ui:ForEachRow.Body>
+                                      <ActivityAction x:TypeArguments="sd:DataRow">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="296,154" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:Int32" Default="1" Name="contados2" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="258,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Int32">[contador2]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Int32">[contador2+1]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:ForEachRow.Body>
+                                  </ui:ForEachRow>
+                                </Sequence>
+                                <ui:ExcelReadRange AddHeaders="False" DataTable="[DTsemanal]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="628.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadRange_4" Range="[&quot;A&quot;+(contador2-40).ToString+&quot;:J&quot;+contador2.ToString]" SheetName="saldo" />
                                 <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="628.666666666667,729.333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" WorkbookPath="[&quot;C:\Users\agustin\Desktop\AgusCosas\Lavadero San Jose\Clientes prueba\&quot;+row(0).ToString+&quot;COPIA.xlsx&quot;]">
                                   <ui:ExcelApplicationScope.Body>
                                     <ActivityAction x:TypeArguments="ui:WorkbookApplication">
